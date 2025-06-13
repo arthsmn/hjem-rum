@@ -8,6 +8,7 @@
   inherit (lib.modules) mkAfter mkIf;
   inherit (lib.options) mkEnableOption mkOption mkPackageOption;
   inherit (lib.types) bool;
+  inherit (lib.strings) optionalString;
 
   toml = pkgs.formats.toml {};
 
@@ -41,8 +42,20 @@ in {
         [Starship's documentation]: https://starship.rs/config
       '';
     };
+
+    enableTransience = mkEnableOption "enable transience.";
+
     integrations = {
       zsh.enable = mkOption {
+        type = bool;
+        default = false;
+        example = true;
+        description = ''
+          Whether to enable starship integration with zsh.
+        '';
+      };
+
+      fish.enable = mkOption {
         type = bool;
         default = false;
         example = true;
@@ -68,5 +81,12 @@ in {
         mkAfter ''eval "$(${getExe cfg.package} init zsh)"''
       );
     };
+
+    rum.programs.fish.config = mkIf cfg.integrations.fish.enable (
+      mkAfter (
+        "starship init fish | source"
+        + (optionalString cfg.enableTransience "enable_transience")
+      )
+    );
   };
 }
