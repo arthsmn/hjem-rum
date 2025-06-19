@@ -62,6 +62,60 @@
   
   <li>
     <details class="toc-category">
+      <summary title="rum.desktops">
+        <span>rum.desktops</span>
+        <span class="toc-count">5</span>
+      </summary>
+      <ul>
+        
+
+        
+        <li>
+          <a href="#option-rum-desktops-hyprland-enable" title="rum.desktops.hyprland.enable">
+            hyprland.enable
+            
+            
+          </a>
+        </li>
+        
+        <li>
+          <a href="#option-rum-desktops-hyprland-extraConfig" title="rum.desktops.hyprland.extraConfig">
+            hyprland.extraConfig
+            
+            
+          </a>
+        </li>
+        
+        <li>
+          <a href="#option-rum-desktops-hyprland-importantPrefixes" title="rum.desktops.hyprland.importantPrefixes">
+            hyprland.importantPrefixes
+            
+            
+          </a>
+        </li>
+        
+        <li>
+          <a href="#option-rum-desktops-hyprland-plugins" title="rum.desktops.hyprland.plugins">
+            hyprland.plugins
+            
+            
+          </a>
+        </li>
+        
+        <li>
+          <a href="#option-rum-desktops-hyprland-settings" title="rum.desktops.hyprland.settings">
+            hyprland.settings
+            
+            
+          </a>
+        </li>
+        
+      </ul>
+    </details>
+  </li>
+  
+  <li>
+    <details class="toc-category">
       <summary title="rum.environment">
         <span>rum.environment</span>
         <span class="toc-count">1</span>
@@ -148,7 +202,7 @@
     <details class="toc-category">
       <summary title="rum.programs">
         <span>rum.programs</span>
-        <span class="toc-count">133</span>
+        <span class="toc-count">128</span>
       </summary>
       <ul>
         
@@ -605,46 +659,6 @@
         <li>
           <a href="#option-rum-programs-hypridle-settings" title="rum.programs.hypridle.settings">
             hypridle.settings
-            
-            
-          </a>
-        </li>
-        
-        <li>
-          <a href="#option-rum-programs-hyprland-enable" title="rum.programs.hyprland.enable">
-            hyprland.enable
-            
-            
-          </a>
-        </li>
-        
-        <li>
-          <a href="#option-rum-programs-hyprland-extraConfig" title="rum.programs.hyprland.extraConfig">
-            hyprland.extraConfig
-            
-            
-          </a>
-        </li>
-        
-        <li>
-          <a href="#option-rum-programs-hyprland-importantPrefixes" title="rum.programs.hyprland.importantPrefixes">
-            hyprland.importantPrefixes
-            
-            
-          </a>
-        </li>
-        
-        <li>
-          <a href="#option-rum-programs-hyprland-plugins" title="rum.programs.hyprland.plugins">
-            hyprland.plugins
-            
-            
-          </a>
-        </li>
-        
-        <li>
-          <a href="#option-rum-programs-hyprland-settings" title="rum.programs.hyprland.settings">
-            hyprland.settings
             
             
           </a>
@@ -1240,7 +1254,85 @@
           </div>
           
 
-          <div class="options-container"><div class="option" id="option-rum-environment-hideWarning">
+          <div class="options-container"><div class="option" id="option-rum-desktops-hyprland-enable">
+  <h3 class="option-name">
+    <a href="#option-rum-desktops-hyprland-enable" class="option-anchor">rum.desktops.hyprland.enable</a>
+    <span class="copy-link" title="Copy link to this option"></span>
+    <span class="copy-feedback">Link copied!</span>
+  </h3>
+  <div class="option-type">Type: <code>boolean</code></div>
+  <div class="option-description"><p>Whether to enable Hyprland.</p>
+</div>
+  <div class="option-default">Default: <code>false</code></div>
+  <div class="option-example">Example: <code>true</code></div>
+  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/desktops/hyprland.nix" target="_blank">&lt;hjem-rum/modules/collection/desktops/hyprland.nix&gt;</a></code></div>
+</div>
+<div class="option" id="option-rum-desktops-hyprland-extraConfig">
+  <h3 class="option-name">
+    <a href="#option-rum-desktops-hyprland-extraConfig" class="option-anchor">rum.desktops.hyprland.extraConfig</a>
+    <span class="copy-link" title="Copy link to this option"></span>
+    <span class="copy-feedback">Link copied!</span>
+  </h3>
+  <div class="option-type">Type: <code>strings concatenated with "\n"</code></div>
+  <div class="option-description"><p>Extra configuration that will be appended verbatim at the end of your <a href="options.html#option-hyprland-conf" class="option-reference"><code>hyprland.conf</code></a>.</p>
+</div>
+  <div class="option-default">Default: <code>""</code></div>
+  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/desktops/hyprland.nix" target="_blank">&lt;hjem-rum/modules/collection/desktops/hyprland.nix&gt;</a></code></div>
+</div>
+<div class="option" id="option-rum-desktops-hyprland-importantPrefixes">
+  <h3 class="option-name">
+    <a href="#option-rum-desktops-hyprland-importantPrefixes" class="option-anchor">rum.desktops.hyprland.importantPrefixes</a>
+    <span class="copy-link" title="Copy link to this option"></span>
+    <span class="copy-feedback">Link copied!</span>
+  </h3>
+  <div class="option-type">Type: <code>list of string</code></div>
+  <div class="option-description"><p>List of prefix of attributes to source at the top of the config.</p>
+</div>
+  <div class="option-default">Default: <code>[
+  "$"
+  "bezier"
+  "name"
+]</code></div>
+  <div class="option-example">Example: <pre><code>[
+  "$"
+  "bezier"
+]</code></pre></div>
+  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/desktops/hyprland.nix" target="_blank">&lt;hjem-rum/modules/collection/desktops/hyprland.nix&gt;</a></code></div>
+</div>
+<div class="option" id="option-rum-desktops-hyprland-plugins">
+  <h3 class="option-name">
+    <a href="#option-rum-desktops-hyprland-plugins" class="option-anchor">rum.desktops.hyprland.plugins</a>
+    <span class="copy-link" title="Copy link to this option"></span>
+    <span class="copy-feedback">Link copied!</span>
+  </h3>
+  <div class="option-type">Type: <code>list of (package or absolute path)</code></div>
+  <div class="option-description"><p>List of Hyprland plugins to use. Can either be packages or
+absolute plugin paths.</p>
+</div>
+  <div class="option-default">Default: <code>[ ]</code></div>
+  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/desktops/hyprland.nix" target="_blank">&lt;hjem-rum/modules/collection/desktops/hyprland.nix&gt;</a></code></div>
+</div>
+<div class="option" id="option-rum-desktops-hyprland-settings">
+  <h3 class="option-name">
+    <a href="#option-rum-desktops-hyprland-settings" class="option-anchor">rum.desktops.hyprland.settings</a>
+    <span class="copy-link" title="Copy link to this option"></span>
+    <span class="copy-feedback">Link copied!</span>
+  </h3>
+  <div class="option-type">Type: <code>Hyprland configuration value</code></div>
+  <div class="option-description"><p>Hyprland configuration written in Nix. Entries with the same key
+should be written as lists. Variables' and colors' names should be
+quoted. See <a href="https://wiki.hyprland.org">Hyprland's documentation</a> for more examples.</p>
+</div>
+  <div class="option-default">Default: <code>{ }</code></div>
+  <div class="option-example">Example: <pre><code>{
+  "\$mod" = "SUPER";
+  decoration = {
+    rounding = "3";
+  };
+}</code></pre></div>
+  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/desktops/hyprland.nix" target="_blank">&lt;hjem-rum/modules/collection/desktops/hyprland.nix&gt;</a></code></div>
+</div>
+<div class="option" id="option-rum-environment-hideWarning">
   <h3 class="option-name">
     <a href="#option-rum-environment-hideWarning" class="option-anchor">rum.environment.hideWarning</a>
     <span class="copy-link" title="Copy link to this option"></span>
@@ -2359,84 +2451,6 @@ for configuration options.</p>
   ];
 }</code></pre></div>
   <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/hypridle.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/hypridle.nix&gt;</a></code></div>
-</div>
-<div class="option" id="option-rum-programs-hyprland-enable">
-  <h3 class="option-name">
-    <a href="#option-rum-programs-hyprland-enable" class="option-anchor">rum.programs.hyprland.enable</a>
-    <span class="copy-link" title="Copy link to this option"></span>
-    <span class="copy-feedback">Link copied!</span>
-  </h3>
-  <div class="option-type">Type: <code>boolean</code></div>
-  <div class="option-description"><p>Whether to enable Hyprland.</p>
-</div>
-  <div class="option-default">Default: <code>false</code></div>
-  <div class="option-example">Example: <code>true</code></div>
-  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/hyprland.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/hyprland.nix&gt;</a></code></div>
-</div>
-<div class="option" id="option-rum-programs-hyprland-extraConfig">
-  <h3 class="option-name">
-    <a href="#option-rum-programs-hyprland-extraConfig" class="option-anchor">rum.programs.hyprland.extraConfig</a>
-    <span class="copy-link" title="Copy link to this option"></span>
-    <span class="copy-feedback">Link copied!</span>
-  </h3>
-  <div class="option-type">Type: <code>strings concatenated with "\n"</code></div>
-  <div class="option-description"><p>Extra configuration that will be appended verbatim at the end of your <a href="options.html#option-hyprland-conf" class="option-reference"><code>hyprland.conf</code></a>.</p>
-</div>
-  <div class="option-default">Default: <code>""</code></div>
-  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/hyprland.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/hyprland.nix&gt;</a></code></div>
-</div>
-<div class="option" id="option-rum-programs-hyprland-importantPrefixes">
-  <h3 class="option-name">
-    <a href="#option-rum-programs-hyprland-importantPrefixes" class="option-anchor">rum.programs.hyprland.importantPrefixes</a>
-    <span class="copy-link" title="Copy link to this option"></span>
-    <span class="copy-feedback">Link copied!</span>
-  </h3>
-  <div class="option-type">Type: <code>list of string</code></div>
-  <div class="option-description"><p>List of prefix of attributes to source at the top of the config.</p>
-</div>
-  <div class="option-default">Default: <code>[
-  "$"
-  "bezier"
-  "name"
-]</code></div>
-  <div class="option-example">Example: <pre><code>[
-  "$"
-  "bezier"
-]</code></pre></div>
-  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/hyprland.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/hyprland.nix&gt;</a></code></div>
-</div>
-<div class="option" id="option-rum-programs-hyprland-plugins">
-  <h3 class="option-name">
-    <a href="#option-rum-programs-hyprland-plugins" class="option-anchor">rum.programs.hyprland.plugins</a>
-    <span class="copy-link" title="Copy link to this option"></span>
-    <span class="copy-feedback">Link copied!</span>
-  </h3>
-  <div class="option-type">Type: <code>list of (package or absolute path)</code></div>
-  <div class="option-description"><p>List of Hyprland plugins to use. Can either be packages or
-absolute plugin paths.</p>
-</div>
-  <div class="option-default">Default: <code>[ ]</code></div>
-  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/hyprland.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/hyprland.nix&gt;</a></code></div>
-</div>
-<div class="option" id="option-rum-programs-hyprland-settings">
-  <h3 class="option-name">
-    <a href="#option-rum-programs-hyprland-settings" class="option-anchor">rum.programs.hyprland.settings</a>
-    <span class="copy-link" title="Copy link to this option"></span>
-    <span class="copy-feedback">Link copied!</span>
-  </h3>
-  <div class="option-type">Type: <code>Hyprland configuration value</code></div>
-  <div class="option-description"><p>Hyprland configuration written in Nix. Entries with the same key
-should be written as lists. Variables' and colors' names should be
-quoted. See <a href="https://wiki.hyprland.org">Hyprland's documentation</a> for more examples.</p>
-</div>
-  <div class="option-default">Default: <code>{ }</code></div>
-  <div class="option-example">Example: <pre><code>{
-  "\$mod" = "SUPER";
-  decoration = {
-    rounding = "3";
-  };
-}</code></pre></div>
-  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/hyprland.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/hyprland.nix&gt;</a></code></div>
 </div>
 <div class="option" id="option-rum-programs-hyprlock-enable">
   <h3 class="option-name">
