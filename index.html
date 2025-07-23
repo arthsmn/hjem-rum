@@ -202,7 +202,7 @@
     <details class="toc-category">
       <summary title="rum.programs">
         <span>rum.programs</span>
-        <span class="toc-count">128</span>
+        <span class="toc-count">132</span>
       </summary>
       <ul>
         
@@ -569,8 +569,8 @@
         </li>
         
         <li>
-          <a href="#option-rum-programs-git-destination" title="rum.programs.git.destination">
-            git.destination
+          <a href="#option-rum-programs-git-attributes" title="rum.programs.git.attributes">
+            git.attributes
             
             
           </a>
@@ -579,6 +579,38 @@
         <li>
           <a href="#option-rum-programs-git-enable" title="rum.programs.git.enable">
             git.enable
+            
+            
+          </a>
+        </li>
+        
+        <li>
+          <a href="#option-rum-programs-git-ignore" title="rum.programs.git.ignore">
+            git.ignore
+            
+            
+          </a>
+        </li>
+        
+        <li>
+          <a href="#option-rum-programs-git-integrations-difftastic-enable" title="rum.programs.git.integrations.difftastic.enable">
+            git.integrations.difftastic.enable
+            
+            
+          </a>
+        </li>
+        
+        <li>
+          <a href="#option-rum-programs-git-integrations-difftastic-flags" title="rum.programs.git.integrations.difftastic.flags">
+            git.integrations.difftastic.flags
+            
+            
+          </a>
+        </li>
+        
+        <li>
+          <a href="#option-rum-programs-git-integrations-difftastic-package" title="rum.programs.git.integrations.difftastic.package">
+            git.integrations.difftastic.package
             
             
           </a>
@@ -2235,17 +2267,24 @@ for configuration options.</p>
 }</code></pre></div>
   <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/ghostty.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/ghostty.nix&gt;</a></code></div>
 </div>
-<div class="option" id="option-rum-programs-git-destination">
+<div class="option" id="option-rum-programs-git-attributes">
   <h3 class="option-name">
-    <a href="#option-rum-programs-git-destination" class="option-anchor">rum.programs.git.destination</a>
+    <a href="#option-rum-programs-git-attributes" class="option-anchor">rum.programs.git.attributes</a>
     <span class="copy-link" title="Copy link to this option"></span>
     <span class="copy-feedback">Link copied!</span>
   </h3>
-  <div class="option-type">Type: <code>one of ".gitconfig", ".config/git/config"</code></div>
-  <div class="option-description"><p>Select your preferred git config location. Do note that options set in
-<code class="file-path">$HOME/.gitconfig</code> will shadow anything set in <code>.config/git/config</code>.</p>
+  <div class="option-type">Type: <code>strings concatenated with "\n"</code></div>
+  <div class="option-description"><p>Global user-level version of .gitattributes written to
+<code class="file-path">$HOME/.config/git/attributes</code>.</p>
 </div>
-  <div class="option-default">Default: <code>".gitconfig"</code></div>
+  <div class="option-default">Default: <code>""</code></div>
+  <div class="option-example">Example: <pre><code>''
+  # Auto detect text files and perform LF normalization
+  * text=auto
+  
+  # Detect Markdown files
+  *.md linguist-detectable=true
+''</code></pre></div>
   <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/git.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/git.nix&gt;</a></code></div>
 </div>
 <div class="option" id="option-rum-programs-git-enable">
@@ -2259,6 +2298,65 @@ for configuration options.</p>
 </div>
   <div class="option-default">Default: <code>false</code></div>
   <div class="option-example">Example: <code>true</code></div>
+  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/git.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/git.nix&gt;</a></code></div>
+</div>
+<div class="option" id="option-rum-programs-git-ignore">
+  <h3 class="option-name">
+    <a href="#option-rum-programs-git-ignore" class="option-anchor">rum.programs.git.ignore</a>
+    <span class="copy-link" title="Copy link to this option"></span>
+    <span class="copy-feedback">Link copied!</span>
+  </h3>
+  <div class="option-type">Type: <code>strings concatenated with "\n"</code></div>
+  <div class="option-description"><p>Global user-level version of .gitignore written to
+<code class="file-path">$HOME/.config/git/ignore</code>.</p>
+</div>
+  <div class="option-default">Default: <code>""</code></div>
+  <div class="option-example">Example: <pre><code>''
+  .direnv
+''</code></pre></div>
+  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/git.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/git.nix&gt;</a></code></div>
+</div>
+<div class="option" id="option-rum-programs-git-integrations-difftastic-enable">
+  <h3 class="option-name">
+    <a href="#option-rum-programs-git-integrations-difftastic-enable" class="option-anchor">rum.programs.git.integrations.difftastic.enable</a>
+    <span class="copy-link" title="Copy link to this option"></span>
+    <span class="copy-feedback">Link copied!</span>
+  </h3>
+  <div class="option-type">Type: <code>boolean</code></div>
+  <div class="option-description"><p>Whether to enable git integration with difftastic.</p>
+</div>
+  <div class="option-default">Default: <code>false</code></div>
+  <div class="option-example">Example: <code>true</code></div>
+  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/git.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/git.nix&gt;</a></code></div>
+</div>
+<div class="option" id="option-rum-programs-git-integrations-difftastic-flags">
+  <h3 class="option-name">
+    <a href="#option-rum-programs-git-integrations-difftastic-flags" class="option-anchor">rum.programs.git.integrations.difftastic.flags</a>
+    <span class="copy-link" title="Copy link to this option"></span>
+    <span class="copy-feedback">Link copied!</span>
+  </h3>
+  <div class="option-type">Type: <code>list of string</code></div>
+  <div class="option-description"><p>Command-line flags passed to <code>difft</code>. Please run <code>difft --help</code> for
+configuration options.</p>
+</div>
+  <div class="option-default">Default: <code>[ ]</code></div>
+  <div class="option-example">Example: <pre><code>[
+  "--background light"
+  "--display inline"
+  "--ignore-comments"
+]</code></pre></div>
+  <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/git.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/git.nix&gt;</a></code></div>
+</div>
+<div class="option" id="option-rum-programs-git-integrations-difftastic-package">
+  <h3 class="option-name">
+    <a href="#option-rum-programs-git-integrations-difftastic-package" class="option-anchor">rum.programs.git.integrations.difftastic.package</a>
+    <span class="copy-link" title="Copy link to this option"></span>
+    <span class="copy-feedback">Link copied!</span>
+  </h3>
+  <div class="option-type">Type: <code>package</code></div>
+  <div class="option-description"><p>The difftastic package to use.</p>
+</div>
+  <div class="option-default">Default: <code>pkgs.difftastic</code></div>
   <div class="option-declared">Declared in: <code><a href="https://github.com/snugnug/hjem-rum/blob/main/modules/collection/programs/git.nix" target="_blank">&lt;hjem-rum/modules/collection/programs/git.nix&gt;</a></code></div>
 </div>
 <div class="option" id="option-rum-programs-git-package">
